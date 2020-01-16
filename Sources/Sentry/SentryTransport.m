@@ -51,7 +51,13 @@
 
 @implementation SentryTransport
 
+@synthesize shouldQueueEvent = _shouldQueueEvent;
+@synthesize lastEvent = _lastEvent;
 @synthesize maxEvents = _maxEvents;
+@synthesize maxBreadcrumbs = _maxBreadcrumbs;
+@synthesize fileManager = _fileManager;
+@synthesize requestManager = _requestManager;
+@synthesize options = _options;
 
 - (id)initWithOptions:(SentryOptions *)options {
   if (self = [super init]) {
